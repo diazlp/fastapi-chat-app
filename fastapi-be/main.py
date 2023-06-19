@@ -47,11 +47,6 @@ async def websocket_endpoint(room_id:str, websocket: WebSocket):
   except:
         pass
 
-async def broadcast_message(room_id: str, message: str):
-    if room_id in active_connections:
-        for connection in active_connections[room_id]:
-            await connection.send_text(message)
-
 @app.post('/rooms')
 def create_room_handler(room: models.Room):
   db = database.SessionLocal()
