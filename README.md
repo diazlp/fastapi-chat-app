@@ -64,3 +64,9 @@ You can obtain the `<device_id>` by executing `adb devices` in any terminal wind
 
 ### Homescreen View
 
+![HomeScreen](https://github.com/diazlp/fastapi-chat-app/assets/37856850/5873531b-f63c-4cf6-aac3-f6d94f7bad6c)
+
+### Chatroom View
+
+![Chatroom View](https://github.com/diazlp/fastapi-chat-app/assets/37856850/6570c437-76f8-4ce6-a11f-a5ecd553f475)
+
