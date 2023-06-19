@@ -14,10 +14,10 @@ const HomeScreen = ({ navigation }) => {
     }
 
     try {
-      const response = await fetch('http://localhost:8000/rooms', {
+      const response = await fetch('http://10.0.2.2:8000/rooms', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
+          'content-type': 'application/json',
         },
         body: JSON.stringify(payload),
       });
@@ -36,8 +36,7 @@ const HomeScreen = ({ navigation }) => {
 
   const handleJoinRoom = async () => {
     try {
-      const response = await fetch(`http://localhost:8000/rooms/${joinRoomId}`);
-
+      const response = await fetch(`http://10.0.2.2:8000/rooms/${joinRoomId}`);
 
       if (response.ok) {
         const data = await response.json();
@@ -48,7 +47,7 @@ const HomeScreen = ({ navigation }) => {
         setJoinRoomError('Room not found');
       }
     } catch (error) {
-      console.error('Error joining room:', error);
+      console.error('Error joining room:', error.message);
       setJoinRoomError('Error joining room');
     }
   };
